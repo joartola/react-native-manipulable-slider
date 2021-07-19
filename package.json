@@ -1,0 +1,21 @@
+{
+  "name": "react-native-manipulable-slider",
+  "version": "1.0.0",
+  "description": "React Native Slider. Manipulate your slider from parents view (Go to index, go next, go back).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Slider",
+    "React",
+    "Native",
+    "Manipulate",
+    "react-native",
+    "react-component"
+
+  ],
+  "author": "Joaquin Artola",
+  "license": "MIT"
+}
+
