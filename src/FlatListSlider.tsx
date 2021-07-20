@@ -3,7 +3,6 @@ import {
   View,
   StyleSheet,
   FlatList,
-  ListRenderItem,
   ViewToken,
   FlatListProps,
   ViewabilityConfigCallbackPairs,
@@ -17,31 +16,11 @@ import {useImperativeHandle} from 'react';
 import {LayoutAnimation} from 'react-native';
 import {useEffect} from 'react';
 import {useCallback} from 'react';
+import {ManipulableSliderProps} from './types';
 
-interface Props {
-  data: any[];
-  renderItem: ListRenderItem<any>;
-  totalItemWidth: number;
-  loop?: boolean;
-  currentIndexCallback?: (_props: any) => void;
-  onSlideOnLast?: () => void;
-  onStateChange?: ({index}: {index: number}) => void;
-  indicatorStyle?: object;
-  indicatorContainerStyle?: object;
-  indicatorInActiveColor?: string;
-  indicatorActiveColor?: string;
-  indicatorActiveWidth?: number;
-  indicator?: boolean;
-  sliderRef?: React.RefObject<FlatList<FlatListProps<any>>>;
-  animation?: boolean;
-  imperativeHandlerRef?: React.Ref<unknown> | undefined;
-  autoscroll?: boolean;
-  timer?: number;
-}
-
-const FlatListSlider: React.FC<Props> = ({
+const FlatListSlider: React.FC<ManipulableSliderProps> = ({
   data = [],
-  totalItemWidth,
+  itemWIdth,
   renderItem,
   loop = false,
   currentIndexCallback = () => {},
@@ -191,8 +170,8 @@ const FlatListSlider: React.FC<Props> = ({
         ItemSeparatorComponent={() => <View style={{width: 0}} />}
         viewabilityConfig={viewabilityConfig}
         getItemLayout={(_data, index) => ({
-          length: totalItemWidth,
-          offset: totalItemWidth * index,
+          length: itemWIdth,
+          offset: itemWIdth * index,
           index,
         })}
         initialNumToRender={1}

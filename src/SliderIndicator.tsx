@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
+import {SliderIndicatorProps} from './types';
 
 const SliderIndicator = ({
   itemCount,
@@ -9,15 +10,7 @@ const SliderIndicator = ({
   indicatorInActiveColor,
   indicatorActiveWidth = 6,
   indicatorContainerStyle,
-}: {
-  itemCount: number;
-  currentIndex: number;
-  indicatorStyle: object;
-  indicatorInActiveColor: string;
-  indicatorActiveColor: string;
-  indicatorActiveWidth?: number;
-  indicatorContainerStyle: object;
-}) => {
+}: SliderIndicatorProps) => {
   let indicators = [];
   for (let i = 0; i < itemCount; i++) {
     indicators.push(
