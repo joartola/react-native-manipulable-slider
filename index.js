@@ -1,3 +1,2 @@
-
-import FlatListSlider from './src/FlatListSlider';
-export { FlatListSlider };
+import ManipulableSlider from "./src/ManipulableSlider";
+export default ManipulableSlider;

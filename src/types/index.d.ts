@@ -31,3 +31,5 @@ interface SliderIndicatorProps {
   indicatorActiveWidth?: number;
   indicatorContainerStyle: object;
 }
+
+declare class FlatListSlider extends React.Component<ManipulableSliderProps> {}

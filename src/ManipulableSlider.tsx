@@ -18,7 +18,7 @@ import {useEffect} from 'react';
 import {useCallback} from 'react';
 import {ManipulableSliderProps} from './types';
 
-const FlatListSlider: React.FC<ManipulableSliderProps> = ({
+const ManipulableSlider: React.FC<ManipulableSliderProps> = ({
   data = [],
   itemWIdth,
   renderItem,
@@ -238,4 +238,4 @@ const styles = StyleSheet.create({
   active: {},
   inactive: {},
 });
-export default FlatListSlider;
+export default ManipulableSlider;
